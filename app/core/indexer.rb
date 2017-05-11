@@ -6,6 +6,15 @@ class Indexer
     @document = Nokogiri::HTML(html)
   end
 
+  def to_h
+    {
+      h1_tag_contents: h1_tag_contents,
+      h2_tag_contents: h2_tag_contents,
+      h3_tag_contents: h3_tag_contents,
+      links: links
+    }
+  end
+
   def h1_tag_contents
     @h1_tag_contents ||= find_content('h1')
   end
