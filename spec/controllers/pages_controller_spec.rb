@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PagesController, type: :controller do
+RSpec.describe Api::V1::PagesController, type: :controller do
 
   describe "POST #create" do
     context "with valid URL" do
